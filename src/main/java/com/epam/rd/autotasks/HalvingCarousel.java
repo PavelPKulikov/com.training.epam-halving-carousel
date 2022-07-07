@@ -6,4 +6,14 @@ public class HalvingCarousel extends DecrementingCarousel {
         super(capacity);
     }
 
+
+    @Override
+    public CarouselRun run() {
+        if (!carouselGo ){
+            carouselGo = true;
+            return new CarouselRun(1);
+        }
+        return super.run();
+    }
+
 }
